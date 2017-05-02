@@ -544,7 +544,7 @@ const memoFactory = function (memo) {
   }
 }
 
-let memoOne = memofactory("Hello World")
+let memoOne = memoFactory("Hello World")
 
 memoOne() // "Hello World"
 ```
