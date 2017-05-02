@@ -6,7 +6,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const outs = require('../lib/school_honesty_lab.js');
+const outs = require('../lib/school-honesty-lab.js');
 
 
 describe('student', function () {

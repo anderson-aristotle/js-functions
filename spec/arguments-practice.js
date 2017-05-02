@@ -6,7 +6,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const ins = require('../lib/arguments_practice.js');
+const ins = require('../lib/arguments-practice.js');
 
 describe('max', function () {
 

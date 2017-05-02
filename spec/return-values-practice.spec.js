@@ -6,7 +6,7 @@
 const chai = require('chai')
 const expect = chai.expect
 
-const outs = require('../lib/return_values_practice.js')
+const outs = require('../lib/return-values-practice.js')
 
 describe('createPerson', function () {
   it('returns undefined when called without arguments', function () {

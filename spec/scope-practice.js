@@ -6,6 +6,6 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const outs = require('../lib/scope_practice.js');
+const outs = require('../lib/scope-practice.js');
 
 // no tests, this exercise uses `node` and `console.log` to check variables
