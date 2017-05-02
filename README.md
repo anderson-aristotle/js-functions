@@ -294,7 +294,7 @@ subtract( [2, 1] ) // 1
 add( 2, 1 ) // 3
 ```
 
-In Javascript a function can accept an unlimited number of arguments since
+In Javascript a function can accept an arbitrary number of arguments since
 every function has an `arguments` object that is a mechanism to handle
 arguments not in the function definition. This object is referred to as `array
 like` and is available within any function. We'll examine how this object is
