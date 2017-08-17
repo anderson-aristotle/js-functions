@@ -287,7 +287,7 @@ const subtract = function(nums){
 
 // number
 const add = function(num1, num2){
-  return num1 - num2
+  return num1 + num2
 }
 
 subtract( [2, 1] ) // 1
