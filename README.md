@@ -585,7 +585,7 @@ console.log(entryWednesday) // "3: Ugh Wednesday"
 
 ## Additional Resources
 -   [Scope](http://www.2ality.com/2015/02/es6-scoping.html)
--   [Closure](https://www.youtube.com/watch?v=QyUFheng6J0)
+-   [Closure - Video](https://www.youtube.com/watch?v=QyUFheng6J0)
 -   [Closure](https://stackoverflow.com/questions/111102/how-do-javascript-closures-work)
 -   [Callbacks](https://www.impressivewebs.com/callback-functions-javascript/)
 -   [Array slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
