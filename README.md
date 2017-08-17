@@ -425,7 +425,7 @@ Primitive data types returned are a new instance of the data type
 ```js
 let num = 1
 
-const increase = function (num) {
+const change = function (num) {
   num++
   return num
 }
