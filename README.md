@@ -4,8 +4,8 @@
 
 ## Prerequisites
 
--   [JavaScript Reference Types](https://github.com/ga-wdi-boston/js-reference-types)
--   [JavaScript Functions - "Ins & Outs" - Study](https://github.com/ga-wdi-boston/js-functions-ins-and-outs-study#readme)
+-   [JavaScript Reference Types](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types)
+-   [JavaScript Functions - "Ins & Outs" - Study](https://git.generalassemb.ly/ga-wdi-boston/js-functions-ins-and-outs-study#readme)
 
 ## Objectives
 
@@ -20,7 +20,7 @@ By the end of this talk, developers should be able to:
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
 1.  Create a new branch, `training`, for your work.
 1.  Install dependencies with `npm install`.
