@@ -4,8 +4,8 @@
 
 ## Prerequisites
 
--   [JavaScript Reference Types](https://github.com/ga-wdi-boston/js-reference-types)
--   [JavaScript Functions - "Ins & Outs" - Study](https://github.com/ga-wdi-boston/js-functions-ins-and-outs-study#readme)
+-   [JavaScript Reference Types](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types)
+-   [JavaScript Functions - "Ins & Outs" - Study](https://git.generalassemb.ly/ga-wdi-boston/js-functions-ins-and-outs-study#readme)
 
 ## Objectives
 
@@ -20,7 +20,7 @@ By the end of this talk, developers should be able to:
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
 1.  Create a new branch, `training`, for your work.
 1.  Install dependencies with `npm install`.
@@ -287,7 +287,7 @@ const subtract = function(nums){
 
 // number
 const add = function(num1, num2){
-  return num1 - num2
+  return num1 + num2
 }
 
 subtract( [2, 1] ) // 1
@@ -425,7 +425,7 @@ Primitive data types returned are a new instance of the data type
 ```js
 let num = 1
 
-const increase = function (num) {
+const change = function (num) {
   num++
   return num
 }
@@ -479,46 +479,52 @@ console.log(result) // ReferenceError: result is not defined
 
 ##### Lab - reference types as arguments and return values
 
-Write a function that takes an array of developers and a callback function
-Loops through the developers to check if they cheated and if they did then
-applies the correct callback function to adjust their score.
+Write a function that takes an array of students and two callback functions. The function should loop through the students to check if they cheated and then apply the correct callback function to adjust their score.
 
 ```js
-const developer = {
-  name: "Mike",
-  late: true,
+// student one
+const studentOne = {
+  name: 'Mike',
+  cheated: true,
   score: 100
 }
 
-const anotherDeveloper = {
-  name: "Bernard",
-  late: false,
+// student two
+const studentTwo = {
+  name: 'Bernard',
+  cheated: false,
   score: 90
 }
 
-const developers = [developer, anotherDeveloper]
+// students array
+const students = [studentOne, studentTwo]
 
-const deductForCheating = function (developer) {
-  developer.score = 0
+// a callback function that is passed as an argument
+// to runCheatingScript(), takes 25 points away from
+// student's score
+const deductForCheating = function (student) {
+  student.score = student.score - 25
 }
 
-// write a callback that can be passed to runLateScript
-// it should have a parameter for a developer object
-// to note the late submission was early in the course
-const firstWeek = function () {
+// a callback function that is passed as an argument
+// to runCheatingScript(), adds 5 points to student's
+// score
+const addForHonesty = function (student) {
+
 }
 
-// the function should accept an array of developers
+// the function should accept an array of students
 // and two callback functions
-const runLateScript = function () {
-  // loop through the developers array and check who was late
-  // then pass them as an argument to the correct callback
+const runCheatingScript = function () {
+  // loop through the students array and check if they
+  // cheated, then pass them as an argument to the correct
+  // callback
 
 }
 
-// the function should get passed an array of developers
+// the function should get passed an array of students
 // and two callback functions
-runLateScript()
+runCheatingScript()
 ```
 
 ##### Code along  - return new objects
@@ -585,7 +591,7 @@ console.log(entryWednesday) // "3: Ugh Wednesday"
 
 ## Additional Resources
 -   [Scope](http://www.2ality.com/2015/02/es6-scoping.html)
--   [Closure](https://www.youtube.com/watch?v=QyUFheng6J0)
+-   [Closure - Video](https://www.youtube.com/watch?v=QyUFheng6J0)
 -   [Closure](https://stackoverflow.com/questions/111102/how-do-javascript-closures-work)
 -   [Callbacks](https://www.impressivewebs.com/callback-functions-javascript/)
 -   [Array slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
