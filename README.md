@@ -479,46 +479,52 @@ console.log(result) // ReferenceError: result is not defined
 
 ##### Lab - reference types as arguments and return values
 
-Write a function that takes an array of developers and a callback function
-Loops through the developers to check if they cheated and if they did then
-applies the correct callback function to adjust their score.
+Write a function that takes an array of students and two callback functions. The function should loop through the students to check if they cheated and then apply the correct callback function to adjust their score.
 
 ```js
-const developer = {
-  name: "Mike",
-  late: true,
+// student one
+const studentOne = {
+  name: 'Mike',
+  cheated: true,
   score: 100
 }
 
-const anotherDeveloper = {
-  name: "Bernard",
-  late: false,
+// student two
+const studentTwo = {
+  name: 'Bernard',
+  cheated: false,
   score: 90
 }
 
-const developers = [developer, anotherDeveloper]
+// students array
+const students = [studentOne, studentTwo]
 
-const deductForCheating = function (developer) {
-  developer.score = 0
+// a callback function that is passed as an argument
+// to runCheatingScript(), takes 25 points away from
+// student's score
+const deductForCheating = function (student) {
+  student.score = student.score - 25
 }
 
-// write a callback that can be passed to runLateScript
-// it should have a parameter for a developer object
-// to note the late submission was early in the course
-const firstWeek = function () {
+// a callback function that is passed as an argument
+// to runCheatingScript(), adds 5 points to student's
+// score
+const addForHonesty = function (student) {
+
 }
 
-// the function should accept an array of developers
+// the function should accept an array of students
 // and two callback functions
-const runLateScript = function () {
-  // loop through the developers array and check who was late
-  // then pass them as an argument to the correct callback
+const runCheatingScript = function () {
+  // loop through the students array and check if they
+  // cheated, then pass them as an argument to the correct
+  // callback
 
 }
 
-// the function should get passed an array of developers
+// the function should get passed an array of students
 // and two callback functions
-runLateScript()
+runCheatingScript()
 ```
 
 ##### Code along  - return new objects
