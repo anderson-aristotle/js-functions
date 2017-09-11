@@ -276,7 +276,7 @@ add("cat", 1) // "cat1"
 It is up to the developer to know the order and type of arguments a function
 is expecting.
 
-The arguments passed to a function can be any primitive data types or objects
+The arguments passed to a function can be any primitive data types or reference types,
 which include objects, arrays, and functions.
 
 ```js
@@ -317,7 +317,7 @@ print(100, 200) // 100
 ```js
 // takes an arbitrary number of arguments (each arg
 // should be a number), finds the largest one, and
-// returns that member
+// returns that number
 
 const max = function () {
 
