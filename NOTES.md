@@ -34,3 +34,28 @@ const bar = function bar () {};
 const baz = function baz () {};
 ```
 - We originally showed developers naming the function in the declaration, as well as the expression. Useful to point out naming function in the declaration is useful when dealing with recursion, but we shouldn't go into more depth.
+
+### Distinction between using same name in variable and function parameter
+
+From [Issue #42](https://git.generalassemb.ly/ga-wdi-boston/js-functions-ins-and-outs/issues/42)
+
+```js
+Reference types as arguments
+
+Reference types passed as arguments can be modified within the functions.
+
+Demo - primitive data types as arguments
+
+let num = 1
+
+const change = function (num) {
+  num++
+  console.log(num)
+}
+
+change(num) // 2
+console.log(num) // 1
+This was causing some confusion as to when num was the global variable and when it was the parameter
+```
+
+- comment on the above referenced issue #42 mentions "Specifically, the annotation should mention that this is called "shadowing", and the point is to illustrate further how block scope works.
