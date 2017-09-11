@@ -19,3 +19,18 @@ Additionally, ask everyone the same question using cold-call cards. Trust me. It
 > "A callback is a function that is passed to another function."
 
 This is all. They will think it is a trick. They will think there's more they don't get. It's definitional. Callbacks are not special. They are types passed to a function that accesses those values in the body.
+
+### Function naming
+from [Issue #52](https://git.generalassemb.ly/ga-wdi-boston/js-functions-ins-and-outs/issues/52)
+After the debate taking place in the issues mentioned above, the final consensus on function naming is as follows
+```js
+// GOOD
+const foo = function () { };
+
+// GOOD if needed for recursion
+const bar = function bar () {};
+
+// BAD otherwise
+const baz = function baz () {};
+```
+- We originally showed developers naming the function in the declaration, as well as the expression. Useful to point out naming function in the declaration is useful when dealing with recursion, but we shouldn't go into more depth.
