@@ -344,61 +344,9 @@ const createPerson = function (givenName, surname, bornOn, height, weight, eyeCo
 
 #### Functions as returns values
 
-Functions returned from functions generate a closure.
-Closures provide great utility.
-
-##### Demo - return new functions
-
-```js
-const memoFactory = function (memo) {
-  let rememberMe = memo
-  return function () {
-    console.log(rememberMe)
-  }
-}
-
-let memoOne = memoFactory("Hello World")
-
-memoOne() // "Hello World"
-```
-
-##### Code along - return new functions
-
-Functions returned from functions generate a closure.
-Closures provide great utility.
-
-```js
-const counterFactory = function(count) {
-
-}
-```
-
-Combine the last two concepts and we can have a counting list of memos.
-
-```js
-const memoFactory = function (memo) {
-  let total = 0
-
-  return function () {
-    total+= 1
-    return total + ": " + memo
-  }
-}
-
-const memo = memoFactory()
-
-const entryMonday = memo("Monday was fun")
-const entryTuesday = memo("I liked Tuesday")
-const entryWednesday = memo("Ugh Wednesday")
-
-console.log(entryMonday) // "1: Monday was fun"
-console.log(entryTuesday) // "2: I liked Tuesday"
-console.log(entryWednesday) // "3: Ugh Wednesday"
-```
+Remember that in JavaScript, everything is an object, even a function. We already know how to return objects from functions. We can also return functions from functions that can be invoked whenever we like.
 
 ## Additional Resources
--   [Closure - Video](https://www.youtube.com/watch?v=QyUFheng6J0)
--   [Closure](https://stackoverflow.com/questions/111102/how-do-javascript-closures-work)
 -   [Callbacks](https://www.impressivewebs.com/callback-functions-javascript/)
 -   [Array slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 -   [Array shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
