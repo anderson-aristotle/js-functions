@@ -5,7 +5,7 @@
 ## Prerequisites
 
 -   [JavaScript Reference Types](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types)
--   [JavaScript Functions - "Ins & Outs" - Study](https://git.generalassemb.ly/ga-wdi-boston/js-functions-ins-and-outs-study)
+-   [JavaScript Functions - "Ins & Outs" - Study](https://git.generalassemb.ly/ga-wdi-boston/js-functions-arguments-and-return-values-study)
 
 ## Objectives
 
@@ -28,11 +28,11 @@ By the end of this talk, developers should be able to:
 
 What is a function? Why do we use them?
 
-Today we're going to look more closely at functions.  In particular we are going to look at how values are passed into functions to be used within a function body, and how values are returned from functions, so the rest of your code can take advantage of the output of a function. You can think of this as functions arguments and return values, or ins and outs.
+Today we're going to look more closely at functions.  In particular we are going to look at how values are passed into functions to be used within a function body, and how values are returned from functions, so the rest of your code can take advantage of the output of a function. You can think of this as functions arguments and returned values.
 
-## "Ins & Outs"
+## "Arguments and Return Values"
 
-### "Ins"
+### "Arguments"
 
 #### Functions with 0 arguments
 
@@ -226,7 +226,7 @@ doMath(2,1, subtract) // 1
 What is a callback?
 A callback is a function that is passed to another function.
 
-### "Outs"
+### "Return Values"
 
 
 #### Primitive data types as returns values
