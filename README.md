@@ -103,38 +103,6 @@ subtract( [2, 1] ) // 1
 add( 2, 1 ) // 3
 ```
 
-In Javascript a function can accept an arbitrary number of arguments since
-every function has an `arguments` object that is a mechanism to handle
-arguments not in the function definition. This object is referred to as `array
-like` and is available within any function. We'll examine how this object is
-used by creating some seemingly parameterless functions.
-
-##### Demo - `arguments`
-
-```js
-const print = function () {
-  console.log(arguments[0])
-}
-
-print() // undefined
-print("cat") // "cat"
-print(100, 200) // 100
-```
-
-##### Code along - `arguments`
-
-```js
-// takes an arbitrary number of arguments (each arg
-// should be a number), finds the largest one, and
-// returns that number
-
-const max = function () {
-
-}
-```
-
-Could we accomplish something similar using a single argument?
-
 ##### Lab - single array argument
 
 Write a function `maxOfArray` that takes an array of numbers and returns the
@@ -355,6 +323,7 @@ Remember that in JavaScript, everything is an object, even a function. We alread
 -   [Array slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 -   [Array shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 -   [Function call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+-   [Function arguments key word](https://stackoverflow.com/questions/2141520/javascript-variable-number-of-arguments-to-function)
 
 ## [License](LICENSE)
 
