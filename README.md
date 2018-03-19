@@ -141,6 +141,7 @@ max.
 #### Reference types as arguments
 
 Reference types passed as arguments can be modified within the functions.
+It is often considered an [anti-pattern to modify an object that is passed to a function](https://softwareengineering.stackexchange.com/questions/208828/passing-an-object-into-a-method-which-changes-the-object-is-it-a-common-anti).
 
 ##### Demo - primitive data types as arguments
 
