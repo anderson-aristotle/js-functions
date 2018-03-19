@@ -26,7 +26,9 @@ By the end of this talk, developers should be able to:
 
 ## Introduction
 
-JavaScript function argument and return values
+What is a function? Why do we use them?
+
+Today we're going to look more closely at functions.  In particular we are going to look at how values are passed into functions to be used within a function body, and how values are returned from functions, so the rest of your code can take advantage of the output of a function. You can think of this as functions arguments and return values, or ins and outs.
 
 ## "Ins & Outs"
 
