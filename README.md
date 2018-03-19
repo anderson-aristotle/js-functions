@@ -192,7 +192,7 @@ console.log(person.age) // 101
 
 ```js
 
-const addProperty = function addProperty(obj, prop, val) {
+const addProperty = function (obj, prop, val) {
   // this function takes an object and adds a property
   // to it
 
