@@ -5,7 +5,7 @@
 ## Prerequisites
 
 -   [JavaScript Reference Types](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types)
--   [JavaScript Functions - "Ins & Outs" - Study](https://git.generalassemb.ly/ga-wdi-boston/js-functions-ins-and-outs-study)
+-   [JavaScript Functions - "Ins & Outs" - Study](https://git.generalassemb.ly/ga-wdi-boston/js-functions-arguments-and-return-values-study)
 
 ## Objectives
 
@@ -26,11 +26,13 @@ By the end of this talk, developers should be able to:
 
 ## Introduction
 
-JavaScript function argument and return values
+What is a function? Why do we use them?
 
-## "Ins & Outs"
+Today we're going to look more closely at functions.  In particular we are going to look at how values are passed into functions to be used within a function body, and how values are returned from functions, so the rest of your code can take advantage of the output of a function. You can think of this as functions arguments and returned values.
 
-### "Ins"
+## "Arguments and Return Values"
+
+### "Arguments"
 
 #### Functions with 0 arguments
 
@@ -101,38 +103,6 @@ subtract( [2, 1] ) // 1
 add( 2, 1 ) // 3
 ```
 
-In Javascript a function can accept an arbitrary number of arguments since
-every function has an `arguments` object that is a mechanism to handle
-arguments not in the function definition. This object is referred to as `array
-like` and is available within any function. We'll examine how this object is
-used by creating some seemingly parameterless functions.
-
-##### Demo - `arguments`
-
-```js
-const print = function () {
-  console.log(arguments[0])
-}
-
-print() // undefined
-print("cat") // "cat"
-print(100, 200) // 100
-```
-
-##### Code along - `arguments`
-
-```js
-// takes an arbitrary number of arguments (each arg
-// should be a number), finds the largest one, and
-// returns that number
-
-const max = function () {
-
-}
-```
-
-Could we accomplish something similar using a single argument?
-
 ##### Lab - single array argument
 
 Write a function `maxOfArray` that takes an array of numbers and returns the
@@ -141,6 +111,7 @@ max.
 #### Reference types as arguments
 
 Reference types passed as arguments can be modified within the functions.
+It is often considered an [anti-pattern to modify an object that is passed to a function](https://softwareengineering.stackexchange.com/questions/208828/passing-an-object-into-a-method-which-changes-the-object-is-it-a-common-anti).
 
 ##### Demo - primitive data types as arguments
 
@@ -191,7 +162,7 @@ console.log(person.age) // 101
 
 ```js
 
-const addProperty = function addProperty(obj, prop, val) {
+const addProperty = function (obj, prop, val) {
   // this function takes an object and adds a property
   // to it
 
@@ -223,7 +194,7 @@ doMath(2,1, subtract) // 1
 What is a callback?
 A callback is a function that is passed to another function.
 
-### "Outs"
+### "Return Values"
 
 
 #### Primitive data types as returns values
@@ -352,6 +323,7 @@ Remember that in JavaScript, everything is an object, even a function. We alread
 -   [Array slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 -   [Array shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 -   [Function call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+-   [Function arguments key word](https://stackoverflow.com/questions/2141520/javascript-variable-number-of-arguments-to-function)
 
 ## [License](LICENSE)
 

@@ -21,7 +21,7 @@ Additionally, ask everyone the same question using cold-call cards. Trust me. It
 This is all. They will think it is a trick. They will think there's more they don't get. It's definitional. Callbacks are not special. They are types passed to a function that accesses those values in the body.
 
 ### Function naming
-from [Issue #52](https://git.generalassemb.ly/ga-wdi-boston/js-functions-ins-and-outs/issues/52)
+from [Issue #52](https://git.generalassemb.ly/ga-wdi-boston/js-functions-arguments-and-return-values/issues/52)
 After the debate taking place in the issues mentioned above, the final consensus on function naming is as follows
 ```js
 // GOOD
@@ -37,7 +37,7 @@ const baz = function baz () {};
 
 ### Distinction between using same name in variable and function parameter
 
-From [Issue #42](https://git.generalassemb.ly/ga-wdi-boston/js-functions-ins-and-outs/issues/42)
+From [Issue #42](https://git.generalassemb.ly/ga-wdi-boston/js-functions-arguments-and-return-values/issues/42)
 
 ```js
 Reference types as arguments
