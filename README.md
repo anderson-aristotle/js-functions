@@ -11,7 +11,6 @@
 
 By the end of this talk, developers should be able to:
 
--   Create and invoke functions that take an arbitrary number of arguments
 -   Create and invoke functions that take reference types as arguments
 -   Create and invoke functions that return reference types
 -   Create and invoke functions that take functions as arguments
