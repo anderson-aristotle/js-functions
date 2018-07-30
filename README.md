@@ -102,6 +102,10 @@ subtract( [2, 1] ) // 1
 add( 2, 1 ) // 3
 ```
 
+##### Demo - multiple arguments
+
+Write a function max that takes 4 numbers and returns the max.
+
 ##### Lab - single array argument
 
 Write a function `maxOfArray` that takes an array of numbers and returns the
