@@ -1,21 +1,29 @@
 'use strict'
 
-// Allow chai syntax like `expect(foo).to.be.ok;`
-// jshint -W030
-
 const chai = require('chai')
 const expect = chai.expect
 
 const outs = require('../lib/return-values-practice.js')
 
-describe('createPerson', function () {
-  it('returns undefined when called without arguments', function () {
-    expect(outs.createPerson()).to.be.undefined
-  })
-})
-
 describe('counterFactory', function () {
-  it('returns undefined when called without arguments', function () {
-    expect(outs.counterFactory()).to.be.undefined
+  it('returns a function', function () {
+    expect(outs.counterFactory(10)).to.be.a('function')
+  })
+
+  describe('the returned function', function () {
+    it('returns a number', function () {
+      expect(outs.counterFactory(2)()).to.be.a('number')
+    })
+
+    it('starts at zero', function () {
+      expect(outs.counterFactory(2)()).to.eq(0)
+    })
+
+    it('increments the counter by the correct amount', function () {
+      const countBy7 = outs.counterFactory(7)
+      expect(countBy7).to.eq(0)
+      expect(countBy7).to.eq(7)
+      expect(countBy7).to.eq(14)
+    })
   })
 })
