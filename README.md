@@ -11,7 +11,6 @@
 
 By the end of this talk, developers should be able to:
 
--   Create and invoke functions that take an arbitrary number of arguments
 -   Create and invoke functions that take reference types as arguments
 -   Create and invoke functions that return reference types
 -   Create and invoke functions that take functions as arguments
@@ -102,6 +101,10 @@ const add = function(num1, num2){
 subtract( [2, 1] ) // 1
 add( 2, 1 ) // 3
 ```
+
+##### Demo - multiple arguments
+
+Write a function max that takes 4 numbers and returns the max.
 
 ##### Lab - single array argument
 
@@ -262,17 +265,32 @@ function should loop through the pets to check if they can get into their bag of
 kibble and then apply the correct callback function to adjust their dinner
 portions.
 
-##### Code along  - return new objects
+##### Code along  - Functions as returns values
+
+Remember that in JavaScript, everything is an object, even a function. We already know how to return objects from functions. We can also return functions from functions that can be invoked whenever we like.
+
+Say we want a counter that stores a number and increments it by some fixed
+amount, e.g. starting at 0 and then counting up to 4, 8, 12, 16, etc. We can
+accomplish that with a function that references an outside variable to keep
+track of the counter, like this:
 
 ```js
-const createPerson = function (givenName, surname, bornOn, height, weight, eyeColor) {
-
+let counter = 0
+const countBy4 = function () {
+  counter += 4
+  return counter
 }
 ```
 
-#### Functions as returns values
+What if we needed several of these functions, each with a different sized
+increment? We could accomplish that with a function that returns another
+function. Let's give it a try!
 
-Remember that in JavaScript, everything is an object, even a function. We already know how to return objects from functions. We can also return functions from functions that can be invoked whenever we like.
+```js
+const counterFactory = function (increment) {
+
+}
+```
 
 ## Additional Resources
 -   [Callbacks](https://www.impressivewebs.com/callback-functions-javascript/)
