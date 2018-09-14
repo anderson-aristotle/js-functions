@@ -4,30 +4,34 @@
 
 ## Prerequisites
 
--   [JavaScript Reference Types](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types)
--   [JavaScript Functions Study](https://git.generalassemb.ly/ga-wdi-boston/js-functions-study)
+- [JavaScript Reference Types](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types)
+- [JavaScript Functions Study](https://git.generalassemb.ly/ga-wdi-boston/js-functions-study)
 
 ## Objectives
 
 By the end of this talk, developers should be able to:
 
--   Create and invoke functions that take reference types as arguments
--   Create and invoke functions that return reference types
--   Create and invoke functions that take functions as arguments
--   Create and invoke functions that return functions
+- Create and invoke functions that take reference types as arguments.
+- Create and invoke functions that return reference types.
+- Create and invoke functions that take functions as arguments.
+- Create and invoke functions that return functions.
 
 ## Preparation
 
-1.  [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
+1. [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
-1.  Create a new branch, `training`, for your work.
-1.  Install dependencies with `npm install`.
+1. Create a new branch, `training`, for your work.
+1. Install dependencies with `npm install`.
 
 ## Introduction
 
 What is a function? Why do we use them?
 
-Today we're going to look more closely at functions.  In particular we are going to look at how values are passed into functions to be used within a function body, and how values are returned from functions, so the rest of your code can take advantage of the output of a function. You can think of this as functions arguments and returned values.
+Today we're going to look more closely at functions. In particular we are
+going to look at how values are passed into functions to be used within a
+function body, and how values are returned from functions, so the rest of your
+code can take advantage of the output of a function. You can think of this as
+functions arguments and returned values.
 
 ## "Arguments and Return Values"
 
@@ -39,7 +43,7 @@ Some functions do not have parameters when they are defined and do not need
 to be passed arguments when they are called.
 
 ```js
-const printHello = function(){
+const printHello = function () {
   console.log("Hello World")
 }
 
@@ -52,7 +56,7 @@ Some functions define 1 or more parameters and expect 1 or more arguments to be
 passed when called.
 
 ```js
-const subtract = function(num1, num2){
+const subtract = function (num1, num2) {
   return num1 - num2
 }
 
@@ -62,7 +66,7 @@ subtract(2, 1) // 1
 The order of the arguments matter.
 
 ```js
-const subtract = function(num1, num2){
+const subtract = function (num1, num2) {
   return num1 - num2
 }
 
@@ -73,7 +77,7 @@ subtract(2, 1) // 1
 The type of the arguments matter.
 
 ```js
-const add = function(num1, num2){
+const add = function (num1, num2) {
   return num1 + num2
 }
 
@@ -89,17 +93,17 @@ which include objects, arrays, and functions.
 
 ```js
 // array
-const subtract = function(nums){
+const subtract = function (nums) {
   return nums[0] - nums[1]
 }
 
 // number
-const add = function(num1, num2){
+const add = function (num1, num2) {
   return num1 + num2
 }
 
-subtract( [2, 1] ) // 1
-add( 2, 1 ) // 3
+subtract([2, 1]) // 1
+add(2, 1) // 3
 ```
 
 ##### Demo - multiple arguments
@@ -164,11 +168,9 @@ console.log(person.age) // 101
 ##### Code along - reference type arguments
 
 ```js
-
 const addProperty = function (obj, prop, val) {
   // this function takes an object and adds a property
   // to it
-
 }
 ```
 
@@ -178,11 +180,11 @@ Functions are valid arguments.
 A function that is passed to another function is called a callback.
 
 ```js
-const add = function (num1, num2){
+const add = function (num1, num2) {
   return num1 + num2
 }
 
-const subtract = function (num1, num2){
+const subtract = function (num1, num2) {
   return num1 - num2
 }
 
@@ -199,8 +201,8 @@ A callback is a function that is passed to another function.
 
 ### "Return Values"
 
-
 #### Primitive data types as returns values
+
 Primitive data types returned are a new instance of the data type
 
 ```js
@@ -244,9 +246,9 @@ console.log(result) // ReferenceError: result is not defined
  ```js
  let numbers = [1, 2, 3]
 
- const change = function (numbers) {
-   numbers.push(4)
-   return numbers
+ const change = function (nums) {
+   nums.push(4)
+   return nums
  }
 
  let newNumbers = change(numbers)
@@ -267,7 +269,9 @@ portions.
 
 ##### Code along  - Functions as returns values
 
-Remember that in JavaScript, everything is an object, even a function. We already know how to return objects from functions. We can also return functions from functions that can be invoked whenever we like.
+Remember that in JavaScript, everything is an object, even a function. We
+already know how to return objects from functions. We can also return functions
+from functions that can be invoked whenever we like.
 
 Say we want a counter that stores a number and increments it by some fixed
 amount, e.g. starting at 0 and then counting up to 4, 8, 12, 16, etc. We can
@@ -293,15 +297,16 @@ const counterFactory = function (increment) {
 ```
 
 ## Additional Resources
--   [Callbacks](https://www.impressivewebs.com/callback-functions-javascript/)
--   [Callback Challenge](http://www.codewars.com/kata/coding-meetup-number-1-higher-order-functions-series-count-the-number-of-javascript-developers-coming-from-europe)
--   [Array slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
--   [Array shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
--   [Function call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
--   [Function arguments key word](https://stackoverflow.com/questions/2141520/javascript-variable-number-of-arguments-to-function)
+
+- [Callbacks](https://www.impressivewebs.com/callback-functions-javascript/)
+- [Callback Challenge](http://www.codewars.com/kata/coding-meetup-number-1-higher-order-functions-series-count-the-number-of-javascript-developers-coming-from-europe)
+- [Array slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+- [Array shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+- [Function call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+- [Function arguments key word](https://stackoverflow.com/questions/2141520/javascript-variable-number-of-arguments-to-function)
 
 ## [License](LICENSE)
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+1. All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
