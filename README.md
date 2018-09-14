@@ -5,7 +5,7 @@
 ## Prerequisites
 
 -   [JavaScript Reference Types](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types)
--   [JavaScript Functions - "Ins & Outs" - Study](https://git.generalassemb.ly/ga-wdi-boston/js-functions-arguments-and-return-values-study)
+-   [JavaScript Functions Study](https://git.generalassemb.ly/ga-wdi-boston/js-functions-study)
 
 ## Objectives
 
