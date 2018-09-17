@@ -262,10 +262,29 @@ console.log(result) // ReferenceError: result is not defined
 
 ##### Lab - reference types as arguments and return values
 
-Write a function that takes an array of pets and two callback functions. The
-function should loop through the pets to check if they can get into their bag of
-kibble and then apply the correct callback function to adjust their dinner
-portions.
+Write a `feedDogs` function that takes an array of dog objects and two callback
+functions.
+
+Each dog object in the array should have some properties:
+
+- `name` - this should be a string of the dog's name.
+- `foodScoops` - this should be a number that represents how many scoops of
+  kibble that particular dog gets for dinner.
+- `openedFoodBag` - this should be a boolean value that indicates whether or not
+  the dog opened its own bag of food while we were away at work.
+
+The `feedDogs` function needs to loop through the array of dogs and determine
+which callback function it should invoke on each dog.
+
+If the dog's `openedFoodBag` boolean is `true` we should subtract 1 from the
+`foodScoops` because this dog probably already helped itself to some kibble.
+
+If the dog's `openedFoodBag` boolean is `false` let's reward the dog for not
+opening the food bag, we can add 1 to its `foodScoops` as a way of saying 'Good
+Dog!'
+
+You'll have to write the two functions that either add or subtract food scoops,
+and pass them to your `feedDogs` function to be used as callbacks.
 
 ##### Code along  - Functions as returns values
 
