@@ -283,8 +283,8 @@ If the dog's `openedFoodBag` boolean is `false` let's reward the dog for not
 opening the food bag, we can add 1 to its `foodScoops` as a way of saying 'Good
 Dog!'
 
-You'll have to write the two functions that either add or subtract food scoops,
-and pass them to your `feedDogs` function to be used as callbacks.
+The function for subtracting a scoop has been written for you, use it to help
+write your function for adding a scoop.
 
 ##### Code along  - Functions as returns values
 
