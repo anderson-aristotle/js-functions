@@ -132,9 +132,9 @@ Watch as I work with functions that take primitive data types as arguments:
 ```js
 let num = 1
 
-const change = function (num) {
-  num++
-  console.log(num)
+const change = function (incomingNum) {
+  incomingNum++
+  console.log(incomingNum)
 }
 
 change(num) // 2
@@ -150,9 +150,9 @@ First we will work with an array as a function argument:
 ```js
 let numbers = [1, 2, 3]
 
-const change = function (numbers) {
+const change = function (incomingArray) {
   numbers.push(4)
-  console.log(numbers)
+  console.log(incomingArray)
 }
 
 change(numbers) // [1, 2, 3, 4]
@@ -167,9 +167,9 @@ let person = {
   age: 100
 }
 
-const getOlder = function (person) {
-  person.age++
-  console.log(person.age)
+const getOlder = function (personParam) {
+  personParam.age++
+  console.log(personParam.age)
 }
 
 getOlder(person) // 101
@@ -221,9 +221,9 @@ Primitive data types returned are a new instance of the data type
 ```js
 let num = 1
 
-const change = function (num) {
-  num++
-  return num
+const change = function (incomingNum) {
+  incomingNum++
+  return incomingNum
 }
 
 let newNum = change(num)
@@ -259,9 +259,9 @@ console.log(result) // ReferenceError: result is not defined
  ```js
  let numbers = [1, 2, 3]
 
- const change = function (nums) {
-   nums.push(4)
-   return nums
+ const change = function (incomingNumsArray) {
+   incomingNumsArray.push(4)
+   return incomingNumsArray
  }
 
  let newNumbers = change(numbers)
@@ -295,6 +295,8 @@ const countBy4 = function () {
   return counter
 }
 ```
+
+To accomplish the above, you are taking into account where the variable `counter` is defined, and what _scope_ it has. A variable declared outside of a function can be accessed inside a function, but a variable declared inside a function is only accessible inside the function. This and more discussion on scope in JavaScript is the topic for another talk on [js-scope](https://git.generalassemb.ly/ga-wdi-boston/js-scope)
 
 What if we needed several of these functions, each with a different sized
 increment? We could accomplish that with a function that returns another
