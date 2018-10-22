@@ -23,7 +23,7 @@ By the end of this talk, developers should be able to:
 1. Create a new branch, `training`, for your work.
 1. Install dependencies with `npm install`.
 
-## Introduction
+### Introduction
 
 What is a function? Why do we use them?
 
@@ -33,14 +33,11 @@ function body, and how values are returned from functions, so the rest of your
 code can take advantage of the output of a function. You can think of this as
 functions arguments and returned values.
 
-## "Arguments and Return Values"
+### Arguments and Return Values
 
-### "Arguments"
+*Arguments* are values that you pass into a function when you invoke the function. When you first define the function, you specify which *parameters* the function will accept, and give those parameters names, much like naming a variable that will hold a value.
 
-#### Functions with 0 arguments
-
-Some functions do not have parameters when they are defined and do not need
-to be passed arguments when they are called.
+Functions can be defined with 0 or more parameters. Just because you are using a function does not mean you have to pass arguments when you invoke the function:
 
 ```js
 const printHello = function () {
@@ -50,10 +47,17 @@ const printHello = function () {
 printHello()
 ```
 
-#### Functions with 1 or more arguments
 
-Some functions define 1 or more parameters and expect 1 or more arguments to be
-passed when called.
+### Return Values
+
+Each time a function is invoked, the code within the function is executed. The function returns a value as specified by the *return* keyword. If nothing is specified, it will return the value `undefined`, even if you are doing something like the above example with `console.log()`.
+
+Note that the `return` value from a function and using `console.log()` are different. How are they different?
+
+### Functions with 1 or more arguments
+
+Some functions are defined with 1 or more parameters and expect 1 or more arguments to be
+passed when called:
 
 ```js
 const subtract = function (num1, num2) {
@@ -63,7 +67,7 @@ const subtract = function (num1, num2) {
 subtract(2, 1) // 1
 ```
 
-The order of the arguments matter.
+The order of the arguments matter:
 
 ```js
 const subtract = function (num1, num2) {
@@ -74,7 +78,7 @@ subtract(1, 2) // -1
 subtract(2, 1) // 1
 ```
 
-The type of the arguments matter.
+The type of the arguments matter:
 
 ```js
 const add = function (num1, num2) {
@@ -106,49 +110,56 @@ subtract([2, 1]) // 1
 add(2, 1) // 3
 ```
 
-##### Demo - multiple arguments
+### Demo - multiple arguments
 
-Write a function max that takes 4 numbers and returns the max.
+Watch as I write a function `max` that takes 4 numbers and returns the max of the four numbers.
 
-##### Lab - single array argument
+### Lab - single array argument
 
 Write a function `maxOfArray` that takes an array of numbers and returns the
-max.
+maximum value in the array.
 
-#### Reference types as arguments
+### Reference types as arguments
 
-Reference types passed as arguments can be modified within the functions.
-It is often considered an [anti-pattern to modify an object that is passed to a function](https://softwareengineering.stackexchange.com/questions/208828/passing-an-object-into-a-method-which-changes-the-object-is-it-a-common-anti).
+You can also pass _reference types_ to functions (arrays and objects). Reference types passed as arguments can be modified within the function, however it is often considered an [anti-pattern to modify an object that is passed to a function](https://softwareengineering.stackexchange.com/questions/208828/passing-an-object-into-a-method-which-changes-the-object-is-it-a-common-anti).
 
-##### Demo - primitive data types as arguments
+Why is that?
+
+### Demo - primitive data types as arguments
+
+Watch as I work with functions that take primitive data types as arguments:
 
 ```js
 let num = 1
 
-const change = function (num) {
-  num++
-  console.log(num)
+const change = function (incomingNum) {
+  incomingNum++
+  console.log(incomingNum)
 }
 
 change(num) // 2
 console.log(num) // 1
 ```
 
-##### Demo - reference types as arguments - arrays
+### Demo - reference types as arguments - arrays
+
+Watch as I work with a function that takes reference types as arguments.
+
+First we will work with an array as a function argument:
 
 ```js
 let numbers = [1, 2, 3]
 
-const change = function (numbers) {
+const change = function (incomingArray) {
   numbers.push(4)
-  console.log(numbers)
+  console.log(incomingArray)
 }
 
 change(numbers) // [1, 2, 3, 4]
 console.log(numbers) // [1, 2, 3, 4]
 ```
 
-##### Demo - reference types as arguments - objects
+Next we will take an object as an argument:
 
 ```js
 let person = {
@@ -156,16 +167,18 @@ let person = {
   age: 100
 }
 
-const getOlder = function (person) {
-  person.age++
-  console.log(person.age)
+const getOlder = function (personParam) {
+  personParam.age++
+  console.log(personParam.age)
 }
 
 getOlder(person) // 101
 console.log(person.age) // 101
 ```
 
-##### Code along - reference type arguments
+### Code along - reference type arguments
+
+Let's write a function `addProperty` that takes an object, and adds a property to the object. Then, we will assign a value to the property. All three things we need in this function are going to be passed in when we invoke the function:
 
 ```js
 const addProperty = function (obj, prop, val) {
@@ -174,10 +187,11 @@ const addProperty = function (obj, prop, val) {
 }
 ```
 
-#### Functions as arguments
+### Functions as arguments
 
-Functions are valid arguments.
-A function that is passed to another function is called a callback.
+Along with primitives and reference types, you can also pass in functions into other functions. A function at the end of the day is just another kind of object.
+
+A function that is passed to another function is called a _callback_.
 
 ```js
 const add = function (num1, num2) {
@@ -196,21 +210,20 @@ doMath(2,1, add) // 3
 doMath(2,1, subtract) // 1
 ```
 
-What is a callback?
+This is a *very important term*: What is a *callback*?
+
 A callback is a function that is passed to another function.
 
-### "Return Values"
-
-#### Primitive data types as returns values
+### Primitive data types as returns values
 
 Primitive data types returned are a new instance of the data type
 
 ```js
 let num = 1
 
-const change = function (num) {
-  num++
-  return num
+const change = function (incomingNum) {
+  incomingNum++
+  return incomingNum
 }
 
 let newNum = change(num)
@@ -218,7 +231,7 @@ console.log(newNum) // 2
 console.log(num) // 1
 ```
 
-#### Reference types as returns values
+### Reference types as return values
 
 Reference types declared within the function that are returned from functions
 create new instances of that reference type.
@@ -239,54 +252,32 @@ console.log(outcome) // [1, 2, false, true]
 console.log(result) // ReferenceError: result is not defined
 ```
 
- Reference types not declared within the function that are
- returned from functions are still the same reference type
- and not new instances.
+Reference types not declared within the function that are
+returned from functions are still the same reference type
+and not new instances.
 
- ```js
- let numbers = [1, 2, 3]
+```js
+let numbers = [1, 2, 3]
 
- const change = function (nums) {
-   nums.push(4)
-   return nums
- }
+const change = function (incomingNumsArray) {
+incomingNumsArray.push(4)
+return incomingNumsArray
+}
 
- let newNumbers = change(numbers)
- console.log(newNumbers) // [1, 2, 3, 4]
- console.log(numbers) // [1, 2, 3, 4]
+let newNumbers = change(numbers)
+console.log(newNumbers) // [1, 2, 3, 4]
+console.log(numbers) // [1, 2, 3, 4]
 
- newNumbers.push(5,6,7)
- console.log(newNumbers) // [1, 2, 3, 4, 5, 6, 7]
- console.log(numbers) // [1, 2, 3, 4, 5, 6, 7]
+newNumbers.push(5,6,7)
+console.log(newNumbers) // [1, 2, 3, 4, 5, 6, 7]
+console.log(numbers) // [1, 2, 3, 4, 5, 6, 7]
 ```
 
-##### Lab - reference types as arguments and return values
+### Lab - reference types as arguments and return values
 
-Write a `feedDogs` function that takes an array of dog objects and two callback
-functions.
+Starting with the code in `lib/politician-honesty-lab.js`, write a function that takes an array of politicians and two callback functions. The function should loop through the politicians to check if they were honest, and then apply the correct callback function to adjust their score.
 
-Each dog object in the array should have some properties:
-
-- `name` - this should be a string of the dog's name.
-- `foodScoops` - this should be a number that represents how many scoops of
-  kibble that particular dog gets for dinner.
-- `openedFoodBag` - this should be a boolean value that indicates whether or not
-  the dog opened its own bag of food while we were away at work.
-
-The `feedDogs` function needs to loop through the array of dogs and determine
-which callback function it should invoke on each dog.
-
-If the dog's `openedFoodBag` boolean is `true` we should subtract 1 from the
-`foodScoops` because this dog probably already helped itself to some kibble.
-
-If the dog's `openedFoodBag` boolean is `false` let's reward the dog for not
-opening the food bag, we can add 1 to its `foodScoops` as a way of saying 'Good
-Dog!'
-
-The function for subtracting a scoop has been written for you, use it to help
-write your function for adding a scoop.
-
-##### Code along  - Functions as returns values
+### Code along  - Functions as returns values
 
 Remember that in JavaScript, everything is an object, even a function. We
 already know how to return objects from functions. We can also return functions
@@ -305,6 +296,8 @@ const countBy4 = function () {
 }
 ```
 
+To accomplish the above, you are taking into account where the variable `counter` is defined, and what _scope_ it has. A variable declared outside of a function can be accessed inside a function, but a variable declared inside a function is only accessible inside the function. This and more discussion on scope in JavaScript is the topic for another talk on [js-scope](https://git.generalassemb.ly/ga-wdi-boston/js-scope)
+
 What if we needed several of these functions, each with a different sized
 increment? We could accomplish that with a function that returns another
 function. Let's give it a try!
@@ -315,7 +308,7 @@ const counterFactory = function (increment) {
 }
 ```
 
-## Additional Resources
+### Additional Resources
 
 - [Callbacks](https://www.impressivewebs.com/callback-functions-javascript/)
 - [Callback Challenge](http://www.codewars.com/kata/coding-meetup-number-1-higher-order-functions-series-count-the-number-of-javascript-developers-coming-from-europe)
