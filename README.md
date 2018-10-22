@@ -231,7 +231,7 @@ console.log(newNum) // 2
 console.log(num) // 1
 ```
 
-### Reference types as returns values
+### Reference types as return values
 
 Reference types declared within the function that are returned from functions
 create new instances of that reference type.
@@ -252,25 +252,25 @@ console.log(outcome) // [1, 2, false, true]
 console.log(result) // ReferenceError: result is not defined
 ```
 
- Reference types not declared within the function that are
- returned from functions are still the same reference type
- and not new instances.
+Reference types not declared within the function that are
+returned from functions are still the same reference type
+and not new instances.
 
- ```js
- let numbers = [1, 2, 3]
+```js
+let numbers = [1, 2, 3]
 
- const change = function (incomingNumsArray) {
-   incomingNumsArray.push(4)
-   return incomingNumsArray
- }
+const change = function (incomingNumsArray) {
+incomingNumsArray.push(4)
+return incomingNumsArray
+}
 
- let newNumbers = change(numbers)
- console.log(newNumbers) // [1, 2, 3, 4]
- console.log(numbers) // [1, 2, 3, 4]
+let newNumbers = change(numbers)
+console.log(newNumbers) // [1, 2, 3, 4]
+console.log(numbers) // [1, 2, 3, 4]
 
- newNumbers.push(5,6,7)
- console.log(newNumbers) // [1, 2, 3, 4, 5, 6, 7]
- console.log(numbers) // [1, 2, 3, 4, 5, 6, 7]
+newNumbers.push(5,6,7)
+console.log(newNumbers) // [1, 2, 3, 4, 5, 6, 7]
+console.log(numbers) // [1, 2, 3, 4, 5, 6, 7]
 ```
 
 ### Lab - reference types as arguments and return values
